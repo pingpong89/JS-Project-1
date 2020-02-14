@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Workify</title>
+</head>
+<body>
+    <!-- Header -->
+    <div class="container-fluid" ID="header">
+        <div class="jumbotron">
+            <h1>WORKIFY</h1>
+            <p>The smart way to get things done.</p>
+        </div>
+    </div>
+
+    <!-- Sign in & Log in buttons -->
+    <div class="centered">
+        <button type="button" class="btn btn-success btn-lg main_buttons" data-toggle="modal" data-target="#sign_up">Sign Up</button>
+        <button type="button" class="btn btn-default btn-lg main_buttons" data-toggle="modal" data-target="#log_in">Sign In</button>
+    </div>
+
+    <!-- Create new to-do list after log-in -->
+    <!-- <div class="container" ID="todo_lists">
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><input type="submit" value="Create New To Do List" ID="list_button"> </a>
+              </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+              <ul class="list-group">
+                  <li class="list-group-item">Wash clothes</li>
+                  <li class="list-group-item">Do chores</li>
+                  <li class="list-group-item">Do HW</li>
+              </ul>
+          </div>
+      </div> -->
+
+    <!-- Sign up modal form -->
+    <div class="container">
+        <div class="modal fade" id="sign_up" role="dialog">
+            <div class="modal-dialog">
+                <form action="#">
+                    <div class="form-group" id="form-begin1">
+                        <label for="first" id="first-label">First Name:</label>
+                        <input type="text" class="form-control" id="first">
+                    </div>
+                    <div class="form-group">
+                        <label for="last" id="last-label">Last Name:</label>
+                        <input type="text" class="form-control" id="last">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" id="email-label">Email Address:</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" id="password-label">Password:</label>
+                        <input type="password" class="form-control" id="password">
+                    </div>
+                    <div class="checkbox">
+                        <label id="terms-label"><input type="checkbox"> I agree to the terms of use</label>
+                    </div>
+                    <button type="submit" class="btn btn-success" ID="signUpSubmit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Log in modal form -->
+    <div class="container">
+        <div class="modal fade" id="log_in" role="dialog">
+            <div class="modal-dialog">
+                <form action="#">
+                    <div class="form-group" id="form-begin2">
+                        <label for="email" id="email-label2">Email Address:</label>
+                        <input type="email" class="form-control" id="email2">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" id="password-label2">Password:</label>
+                        <input type="password" class="form-control" id="password2">
+                    </div>
+                    <button type="submit" class="btn btn-success" ID="logInSubmit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- New list item modal form -->
+    <div class="container">
+        <div class="modal fade" id="new_item_modal" role="dialog">
+            <div class="modal-dialog">
+                <form action="#">
+                    <div class="form-group">
+                        <label for="list_item">Name your item:</label>
+                        <input type="text" class="form-control" id="newItemName" onfocus="this.value=''">
+                    </div>
+                    <button type="submit" class="btn btn-success" ID="newItemSubmit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
